@@ -23,6 +23,25 @@
   
   
   <entry>
+    <title>如何文件和目录推送至 GitHub 仓库和分支中</title>
+    <link href="/2023/02/24/%E5%A6%82%E4%BD%95%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95%E6%8E%A8%E9%80%81%E8%87%B3-GitHub-%E4%BB%93%E5%BA%93%E5%92%8C%E5%88%86%E6%94%AF%E4%B8%AD/"/>
+    <url>/2023/02/24/%E5%A6%82%E4%BD%95%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95%E6%8E%A8%E9%80%81%E8%87%B3-GitHub-%E4%BB%93%E5%BA%93%E5%92%8C%E5%88%86%E6%94%AF%E4%B8%AD/</url>
+    
+    <content type="html"><![CDATA[<p>在public目录下打开git bash</p><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs maxima">git add .<br>将仓库文件夹中的内容都添加进来<br>git commit -m <span class="hljs-string">&quot;注释信息&quot;</span><br>将暂存区内容添加到本地仓库<br>git <span class="hljs-built_in">push</span> -u <span class="hljs-built_in">origin</span> main<br>将本地仓库推送到远程服务器（<span class="hljs-built_in">origin</span>是远程主机，master表示远程仓库和本地仓库的master分支）<br>（注:第一次推送的话此步骤需要你输入帐号和密码，接下来使用命令就可以不使用 -u了）<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>博客搭建</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>搭建博客报错汇总</title>
     <link href="/2022/11/04/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%8A%A5%E9%94%99%E6%B1%87%E6%80%BB/"/>
     <url>/2022/11/04/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%8A%A5%E9%94%99%E6%B1%87%E6%80%BB/</url>
