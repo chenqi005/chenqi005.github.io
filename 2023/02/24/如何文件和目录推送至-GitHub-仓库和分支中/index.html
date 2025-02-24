@@ -19,29 +19,21 @@
   <meta name="author" content="原来是阿欲">
   <meta name="keywords" content="">
   
-    <meta name="description" content="尝试以下几种方法： （1）个人主页-Settings  点击Disable  （2）去到个人仓库-Settings-Code security，关闭Secret scanning  （3）个人主页-Settings，取消勾选即可   （4）将博客根目录的_config.yml文件中的repository修改成SSH地址，前提是要生成SSH密钥地址（自己上网搜一下教程）  上面所示的方法尝试完后，">
+    <meta name="description" content="在public目录下打开git bash 1234567git add .将仓库文件夹中的内容都添加进来git commit -m &quot;注释信息&quot;将暂存区内容添加到本地仓库git push -u origin main将本地仓库推送到远程服务器（origin是远程主机，master表示远程仓库和本地仓库的master分支）（注:第一次推送的话此步骤需要你输入帐号和密码，接下来使用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搭建博客报错汇总">
-<meta property="og:url" content="http://example.com/2022/11/04/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%8A%A5%E9%94%99%E6%B1%87%E6%80%BB/index.html">
+<meta property="og:title" content="如何文件和目录推送至 GitHub 仓库和分支中">
+<meta property="og:url" content="http://example.com/2023/02/24/%E5%A6%82%E4%BD%95%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95%E6%8E%A8%E9%80%81%E8%87%B3-GitHub-%E4%BB%93%E5%BA%93%E5%92%8C%E5%88%86%E6%94%AF%E4%B8%AD/index.html">
 <meta property="og:site_name" content="原来是阿欲">
-<meta property="og:description" content="尝试以下几种方法： （1）个人主页-Settings  点击Disable  （2）去到个人仓库-Settings-Code security，关闭Secret scanning  （3）个人主页-Settings，取消勾选即可   （4）将博客根目录的_config.yml文件中的repository修改成SSH地址，前提是要生成SSH密钥地址（自己上网搜一下教程）  上面所示的方法尝试完后，">
+<meta property="og:description" content="在public目录下打开git bash 1234567git add .将仓库文件夹中的内容都添加进来git commit -m &quot;注释信息&quot;将暂存区内容添加到本地仓库git push -u origin main将本地仓库推送到远程服务器（origin是远程主机，master表示远程仓库和本地仓库的master分支）（注:第一次推送的话此步骤需要你输入帐号和密码，接下来使用">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="d:\myblog\source\img\%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8A%A5%E9%94%99%E6%B1%87%E6%80%BB\1.png">
-<meta property="og:image" content="d:\myblog\source\img\%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8A%A5%E9%94%99%E6%B1%87%E6%80%BB\2.png">
-<meta property="og:image" content="d:\myblog\source\img\%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8A%A5%E9%94%99%E6%B1%87%E6%80%BB\3.png">
-<meta property="og:image" content="d:\myblog\source\img\%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8A%A5%E9%94%99%E6%B1%87%E6%80%BB\4.png">
-<meta property="og:image" content="d:\myblog\source\img\%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8A%A5%E9%94%99%E6%B1%87%E6%80%BB\5.png">
-<meta property="og:image" content="d:\myblog\source\img\%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8A%A5%E9%94%99%E6%B1%87%E6%80%BB\6.png">
-<meta property="og:image" content="d:\myblog\source\img\%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8A%A5%E9%94%99%E6%B1%87%E6%80%BB\7.png">
-<meta property="article:published_time" content="2022-11-04T07:24:03.000Z">
-<meta property="article:modified_time" content="2024-11-04T07:24:51.454Z">
+<meta property="article:published_time" content="2023-02-24T13:32:02.000Z">
+<meta property="article:modified_time" content="2025-02-24T13:41:22.506Z">
 <meta property="article:author" content="原来是阿欲">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="d:\myblog\source\img\%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8A%A5%E9%94%99%E6%B1%87%E6%80%BB\1.png">
   
   
   
-  <title>搭建博客报错汇总 - 原来是阿欲</title>
+  <title>如何文件和目录推送至 GitHub 仓库和分支中 - 原来是阿欲</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -220,7 +212,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="搭建博客报错汇总"></span>
+            <span id="subtitle" data-typed-text="如何文件和目录推送至 GitHub 仓库和分支中"></span>
           
         </div>
 
@@ -231,8 +223,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-11-04 15:24" pubdate>
-          2022年11月4日 下午
+        <time datetime="2023-02-24 21:32" pubdate>
+          2023年2月24日 晚上
         </time>
       </span>
     
@@ -243,7 +235,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          114 字
+          115 字
         
       </span>
     
@@ -300,27 +292,14 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">搭建博客报错汇总</h1>
+            <h1 id="seo-header">如何文件和目录推送至 GitHub 仓库和分支中</h1>
             
             
               <div class="markdown-body">
                 
-                <p><img src="D:\myblog\source\img\博客搭建报错汇总\1.png" srcset="/img/loading.gif" lazyload alt="image-20241104150348082"></p>
-<p>尝试以下几种方法：</p>
-<p>（1）个人主页-Settings</p>
-<p><img src="D:\myblog\source\img\博客搭建报错汇总\2.png" srcset="/img/loading.gif" lazyload alt="image-20241104150610933"></p>
-<p>点击Disable</p>
-<p><img src="D:\myblog\source\img\博客搭建报错汇总\3.png" srcset="/img/loading.gif" lazyload alt="image-20241104150652741"></p>
-<p>（2）去到个人仓库-Settings-Code security，关闭Secret scanning</p>
-<p><img src="D:\myblog\source\img\博客搭建报错汇总\4.png" srcset="/img/loading.gif" lazyload></p>
-<p>（3）个人主页-Settings，取消勾选即可</p>
-<p><img src="D:\myblog\source\img\博客搭建报错汇总\5.png" srcset="/img/loading.gif" lazyload alt="image-20241104151655331"></p>
-<p><img src="D:\myblog\source\img\博客搭建报错汇总\6.png" srcset="/img/loading.gif" lazyload alt="image-20241104151723263"></p>
-<p>（4）将博客根目录的_config.yml文件中的repository修改成SSH地址，前提是要生成SSH密钥地址（自己上网搜一下教程）</p>
-<p><img src="D:\myblog\source\img\博客搭建报错汇总\7.png" srcset="/img/loading.gif" lazyload alt="image-20241104151937932"></p>
-<p>上面所示的方法尝试完后，输入命令：</p>
-<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
-<p>如若还是不行，请在评论区留言</p>
+                <p>在public目录下打开git bash</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs maxima">git add .<br>将仓库文件夹中的内容都添加进来<br>git commit -m <span class="hljs-string">&quot;注释信息&quot;</span><br>将暂存区内容添加到本地仓库<br>git <span class="hljs-built_in">push</span> -u <span class="hljs-built_in">origin</span> main<br>将本地仓库推送到远程服务器（<span class="hljs-built_in">origin</span>是远程主机，master表示远程仓库和本地仓库的master分支）<br>（注:第一次推送的话此步骤需要你输入帐号和密码，接下来使用命令就可以不使用 -u了）<br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
@@ -359,8 +338,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>搭建博客报错汇总</div>
-      <div>http://example.com/2022/11/04/搭建博客报错汇总/</div>
+      <div>如何文件和目录推送至 GitHub 仓库和分支中</div>
+      <div>http://example.com/2023/02/24/如何文件和目录推送至-GitHub-仓库和分支中/</div>
     </div>
     <div class="license-meta">
       
@@ -372,7 +351,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年11月4日</div>
+          <div>2023年2月24日</div>
         </div>
       
       
@@ -404,9 +383,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/02/24/%E5%A6%82%E4%BD%95%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95%E6%8E%A8%E9%80%81%E8%87%B3-GitHub-%E4%BB%93%E5%BA%93%E5%92%8C%E5%88%86%E6%94%AF%E4%B8%AD/" title="如何文件和目录推送至 GitHub 仓库和分支中">
+                      <a href="/2025/02/02/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%A3%81%E7%9B%98%E6%97%A0%E6%B3%95%E6%89%A9%E5%B1%95%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" title="虚拟机磁盘无法扩展问题解决">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">如何文件和目录推送至 GitHub 仓库和分支中</span>
+                        <span class="hidden-mobile">虚拟机磁盘无法扩展问题解决</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -414,8 +393,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/11/03/Github-Pages-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" title="Github Pages + Hexo搭建博客">
-                        <span class="hidden-mobile">Github Pages + Hexo搭建博客</span>
+                      <a href="/2022/11/04/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%8A%A5%E9%94%99%E6%B1%87%E6%80%BB/" title="搭建博客报错汇总">
+                        <span class="hidden-mobile">搭建博客报错汇总</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

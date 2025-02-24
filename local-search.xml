@@ -4,6 +4,44 @@
   
   
   <entry>
+    <title>虚拟机磁盘无法扩展问题解决</title>
+    <link href="/2025/02/02/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%A3%81%E7%9B%98%E6%97%A0%E6%B3%95%E6%89%A9%E5%B1%95%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    <url>/2025/02/02/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%A3%81%E7%9B%98%E6%97%A0%E6%B3%95%E6%89%A9%E5%B1%95%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</url>
+    
+    <content type="html"><![CDATA[<p>本文介绍虚拟机磁盘扩展时遇到的问题。</p><p>目前情况是：C盘已满；C盘邻居是E盘；E盘邻居是未分区的新加卷。</p><p>此时C盘想要扩展卷是无法达到的，因为未分区的磁盘不是C盘的邻居，只有相邻的才能进行扩展，意思就是目前只能对E盘进行扩展。所以此时只能将E盘进行删除。但是由于E盘上的服务正在允许，我们在命令行上执行clean命令时会出现如下报错：</p><p>虚拟磁盘服务错误: 在当前启动卷、系统卷、页面文件卷、 故障转储卷或休眠卷上不允许删除操作。</p><p>如果想清空磁盘，建议先将系统盘、启动盘、页面文件等移动到其他磁盘上，然后再执行清空操作。但这种操作可能会比较复杂，我们可以直接使用工具来清空磁盘，比如Diskgenius，EaseUS partition master等。我采用的是Diskgenius工具，直接下载打开使用。在这个工具上可以直接将E盘删除。</p><p>此时虚拟机上就只剩C盘和一个未分区的磁盘，现在就可以进行C盘扩展了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>信息安全-磁盘配额</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>如何文件和目录推送至 GitHub 仓库和分支中</title>
+    <link href="/2023/02/24/%E5%A6%82%E4%BD%95%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95%E6%8E%A8%E9%80%81%E8%87%B3-GitHub-%E4%BB%93%E5%BA%93%E5%92%8C%E5%88%86%E6%94%AF%E4%B8%AD/"/>
+    <url>/2023/02/24/%E5%A6%82%E4%BD%95%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95%E6%8E%A8%E9%80%81%E8%87%B3-GitHub-%E4%BB%93%E5%BA%93%E5%92%8C%E5%88%86%E6%94%AF%E4%B8%AD/</url>
+    
+    <content type="html"><![CDATA[<p>在public目录下打开git bash</p><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs maxima">git add .<br>将仓库文件夹中的内容都添加进来<br>git commit -m <span class="hljs-string">&quot;注释信息&quot;</span><br>将暂存区内容添加到本地仓库<br>git <span class="hljs-built_in">push</span> -u <span class="hljs-built_in">origin</span> main<br>将本地仓库推送到远程服务器（<span class="hljs-built_in">origin</span>是远程主机，master表示远程仓库和本地仓库的master分支）<br>（注:第一次推送的话此步骤需要你输入帐号和密码，接下来使用命令就可以不使用 -u了）<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>博客搭建</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>搭建博客报错汇总</title>
     <link href="/2022/11/04/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%8A%A5%E9%94%99%E6%B1%87%E6%80%BB/"/>
     <url>/2022/11/04/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%8A%A5%E9%94%99%E6%B1%87%E6%80%BB/</url>
