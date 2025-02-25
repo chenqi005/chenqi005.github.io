@@ -1,0 +1,1172 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="原来是阿欲">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="第1阶段 网络安全模块协议基础企业网络架构介绍一、企业网络分类公司网络：比较注重成本 教育网络：省、市教育局连接 政府网络：稳定、安全性（保密性）高 金融网络：时效性、安全性 如何实现企业网络的远程互联呢？  专线 VPN  二、企业网络架构企业的网络架构主要分为两种，一种是适用于小型企业的扁平化的企业架构，另一种则是适用于中大型企业的层次化的企业架构。  1、扁平化的企业架构 一般来说，网络终端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第一阶段：网络安全模块">
+<meta property="og:url" content="http://example.com/2025/02/25/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%EF%BC%9A%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%A8%A1%E5%9D%97/index.html">
+<meta property="og:site_name" content="原来是阿欲">
+<meta property="og:description" content="第1阶段 网络安全模块协议基础企业网络架构介绍一、企业网络分类公司网络：比较注重成本 教育网络：省、市教育局连接 政府网络：稳定、安全性（保密性）高 金融网络：时效性、安全性 如何实现企业网络的远程互联呢？  专线 VPN  二、企业网络架构企业的网络架构主要分为两种，一种是适用于小型企业的扁平化的企业架构，另一种则是适用于中大型企业的层次化的企业架构。  1、扁平化的企业架构 一般来说，网络终端">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20240910195000619.png">
+<meta property="og:image" content="c:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20240910203307373.png">
+<meta property="og:image" content="c:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250224142432372.png">
+<meta property="og:image" content="c:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250224161239604.png">
+<meta property="og:image" content="c:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250224201134851.png">
+<meta property="og:image" content="c:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250224203942932.png">
+<meta property="og:image" content="c:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250224204520471.png">
+<meta property="og:image" content="c:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250224204546879.png">
+<meta property="og:image" content="c:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250224210938153.png">
+<meta property="og:image" content="c:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250225170714129.png">
+<meta property="og:image" content="c:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250225165157241.png">
+<meta property="og:image" content="c:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250225170112200.png">
+<meta property="og:image" content="c:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250225195414790.png">
+<meta property="og:image" content="c:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250225195438498.png">
+<meta property="og:image" content="file:///C:/Users/lenovopc/AppData/Local/Temp/ksohtml14008/wps1.jpg">
+<meta property="og:image" content="file:///C:/Users/lenovopc/AppData/Local/Temp/ksohtml14008/wps2.jpg">
+<meta property="og:image" content="file:///C:/Users/lenovopc/AppData/Local/Temp/ksohtml14008/wps3.jpg">
+<meta property="og:image" content="c:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250225202723690.png">
+<meta property="article:published_time" content="2025-02-25T12:45:28.000Z">
+<meta property="article:modified_time" content="2025-02-25T12:47:17.751Z">
+<meta property="article:author" content="原来是阿欲">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="c:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20240910195000619.png">
+  
+  
+  
+  <title>第一阶段：网络安全模块 - 原来是阿欲</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"NW6bLEuU88y0oTIVj3J2zXai-gzGzoHsz","app_key":"61M3wafcrTTADVS9Uc3F7co3","server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>原来是阿欲</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="第一阶段：网络安全模块"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-02-25 20:45" pubdate>
+          2025年2月25日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          6.9k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          58 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span>次
+        </span>
+        
+      
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">第一阶段：网络安全模块</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="第1阶段-网络安全模块"><a href="#第1阶段-网络安全模块" class="headerlink" title="第1阶段 网络安全模块"></a>第1阶段 网络安全模块</h1><h2 id="协议基础"><a href="#协议基础" class="headerlink" title="协议基础"></a>协议基础</h2><h3 id="企业网络架构介绍"><a href="#企业网络架构介绍" class="headerlink" title="企业网络架构介绍"></a>企业网络架构介绍</h3><h4 id="一、企业网络分类"><a href="#一、企业网络分类" class="headerlink" title="一、企业网络分类"></a>一、企业网络分类</h4><p>公司网络：比较注重成本</p>
+<p>教育网络：省、市教育局连接</p>
+<p>政府网络：稳定、安全性（保密性）高</p>
+<p>金融网络：时效性、安全性</p>
+<p>如何实现企业网络的远程互联呢？</p>
+<ul>
+<li>专线</li>
+<li>VPN</li>
+</ul>
+<h4 id="二、企业网络架构"><a href="#二、企业网络架构" class="headerlink" title="二、企业网络架构"></a>二、企业网络架构</h4><p>企业的网络架构主要分为两种，一种是适用于小型企业的扁平化的企业架构，另一种则是适用于中大型企业的层次化的企业架构。</p>
+<p><img src="C:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20240910195000619.png" srcset="/img/loading.gif" lazyload alt="image-20240910195000619"></p>
+<p>1、扁平化的企业架构</p>
+<p>一般来说，网络终端接入数量比较少，且对网络要求比较低时，会选择扁平化的企业结构。</p>
+<p>优点：部署简单（结构简单），成本低（设备比较少）</p>
+<p>缺点：（1）扩展性差；</p>
+<p>​			（2）可靠性低，容易出现单点故障（可以使用双出口的方式解决，选择两个供应商）；</p>
+<p>​			（3）流量瓶颈；</p>
+<p>名词解释：</p>
+<p>​			（1）单点故障：无线路由器连接到运营商的链路出现故障，即使终端显示信号是满格的，也无法连接到网络。</p>
+<p>​			（2）流量瓶颈：设备存在吞吐量的限制（每秒能够收发多少数据），当连接的终端数量较大时，带宽相对来说就被限制了。</p>
+<p>2、层次化的企业架构</p>
+<p>当公司对网络的要求比较高时，会选择层次化的企业架构</p>
+<p>层次：</p>
+<p>​		（1）终端：通信的发起或接收的设备，PC、IP电话、平板、服务器等</p>
+<p>​		（2）接入层：将终端的设备连接到网络中（在此层扩展）</p>
+<p>​		（3）汇聚层（非必要）：将接入层的流量汇聚起来，方便做流量控制</p>
+<p>​		（4）核心层：负责数据的高速转发、对设备性能要求高。</p>
+<p>优点：</p>
+<p>​		（1）可靠性好：多台设备、多条链路，导致冗余性很好，终端可以通过多条链路收发数据</p>
+<p>​		（2）方便排障：因为网络有分层，所以可以做到故障的分层排查</p>
+<p>​		（3）扩展性好：如果要增加终端的接入，可以在接入层多加一台交换机</p>
+<p>缺点：成本高、架构复杂、需要专员进行网络的维护</p>
+<h4 id="三、网络的组成和结构"><a href="#三、网络的组成和结构" class="headerlink" title="三、网络的组成和结构"></a>三、网络的组成和结构</h4><p><img src="C:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20240910203307373.png" srcset="/img/loading.gif" lazyload alt="image-20240910203307373"></p>
+<p>终端设备：PC ipad iphone ATM提款机 公交卡收费端 汽车导航</p>
+<p>网络互联设备：集线器、交换机、路由器、防火墙、IDS、IPS、ICG、AC、基站</p>
+<p>用于连接设备的链路&#x2F;介质：同轴电缆，双绞线，光纤，无线</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">计算机网络的最终目的是实现资源的共享<br></code></pre></td></tr></table></figure>
+
+<h3 id="传输介质简介"><a href="#传输介质简介" class="headerlink" title="传输介质简介"></a>传输介质简介</h3><h4 id="一、简单网络"><a href="#一、简单网络" class="headerlink" title="一、简单网络"></a>一、简单网络</h4><p>两个终端，用一条能承载数据传输的物理介质（也称为传输介质）连接起来，就组成了一个最简单的网络</p>
+<h4 id="二、介质"><a href="#二、介质" class="headerlink" title="二、介质"></a>二、介质</h4><h5 id="1、同轴电缆"><a href="#1、同轴电缆" class="headerlink" title="1、同轴电缆"></a>1、同轴电缆</h5><table>
+<thead>
+<tr>
+<th>以太网标准</th>
+<th>电缆类别</th>
+<th>最长有效传输距离</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>10BASE5</td>
+<td>粗同轴电缆</td>
+<td>500米</td>
+</tr>
+<tr>
+<td>10BASE2</td>
+<td>细同轴电缆</td>
+<td>185米</td>
+</tr>
+</tbody></table>
+<p>同轴电缆是一种早期使用的传输介质，同轴电缆的标准分为两种，10BASE2和10BASE5。这两种标准都支持10Mbps的传输速率，最长传输距离分别为185米和500米。</p>
+<h5 id="2、双绞线"><a href="#2、双绞线" class="headerlink" title="2、双绞线"></a>2、双绞线</h5><p>与同轴电缆相比双绞线（Twisted Pair）具有更低的制造和部署成本，因此在企业网络中被广泛应用。双绞线可分为屏蔽双绞线(Shielded Twisted Pair，STP)和非屏蔽双绞线(Unshielded Twisted Pair，UTP)。屏蔽双绞线在双绞线与外层绝缘封套之间有一个金属屏蔽层，可以屏蔽电磁干扰。</p>
+<p>双绞线有很多种类型，不同类型的双绞线所支持的传输速率一般也不相同。例如，3类双绞线支持10Mbps传输速率；5类双绞线支持100Mbps传输速率；超5类双绞线及更高级别的双绞线支持千兆以太网传输。</p>
+<h5 id="3、光纤"><a href="#3、光纤" class="headerlink" title="3、光纤"></a>3、光纤</h5><p>双绞线和同轴电缆传输数据时使用的是电信号，而光纤传输数据时使用的是光信号。光纤支持的传输速率包括10Mbps，100Mbps，1Gbps，10Gbps，甚至更高。</p>
+<p>根据光纤传输光信号模式的不同，光纤又可分为单模光纤和多模光纤。单模光纤只能传输一种模式的光，不存在模间色散，因此适用于长距离高速传输。多模光纤允许不同模式的光在一根光纤上传输，由于模间色散较大而导致信号脉冲展宽严重，因此多模光纤主要用于局域网中的短距离传输。</p>
+<h5 id="4、串口电缆"><a href="#4、串口电缆" class="headerlink" title="4、串口电缆"></a>4、串口电缆</h5><p><img src="C:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250224142432372.png" srcset="/img/loading.gif" lazyload alt="image-20250224142432372"></p>
+<h4 id="三、双工模式"><a href="#三、双工模式" class="headerlink" title="三、双工模式"></a>三、双工模式</h4><p>半双工模式：通信双方都能发送和接收数据，但不能同时进行。</p>
+<p>全双工模式：通信双方都能同时接收和发送数据。</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs dos">以太网上的通信模式包括半双工和全双工两种：<br>半双工模式下，共享物理介质的通信双方必须采用CSMA/<span class="hljs-built_in">CD</span>机制来避免冲突。<br></code></pre></td></tr></table></figure>
+
+<h4 id="四、冲突域"><a href="#四、冲突域" class="headerlink" title="四、冲突域"></a>四、冲突域</h4><p><img src="C:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250224161239604.png" srcset="/img/loading.gif" lazyload alt="image-20250224161239604"></p>
+<p>共享式网络中可能会出现信号冲突现象。解决方法：CSMA&#x2F;CD机制</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">共享式网络中，不同的主机同时发送数据时，就会产生信号冲突的问题，解决这一问题的方法一般是采用载波侦听多路访问/冲突检测技术。<br></code></pre></td></tr></table></figure>
+
+<h4 id="五、CSMA-CD机制"><a href="#五、CSMA-CD机制" class="headerlink" title="五、CSMA&#x2F;CD机制"></a>五、CSMA&#x2F;CD机制</h4><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dos">CSMA/<span class="hljs-built_in">CD</span>机制是一种在共享式网络上检测并避免冲突的机制<br></code></pre></td></tr></table></figure>
+
+<p>CSMA&#x2F;CD的基本工作过程如下：</p>
+<p>终端设备不停地检测共享线路的状态。如果线路空闲，则可以发送数据；如果线路不空闲，则等待一段时间后继续检测（延时时间由退避算法决定）。<br>如果有另外一个设备同时发送数据，两个设备发送的数据会产生冲突。<br>终端设备检测到冲突之后，会马上停止发送自己的数据，并发送特殊阻塞信息，以强化冲突信号，使线路上其他站点能够尽早检测到冲突。<br>终端设备检测到冲突后，等待一段时间之后再进行数据发送（延时时间由退避算法决定）。<br>CSMA&#x2F;CD的工作原理可简单总结为：先听后发，边发边听，冲突停发，随机延迟后重发。</p>
+<h3 id="以太帧结构"><a href="#以太帧结构" class="headerlink" title="以太帧结构"></a>以太帧结构</h3><h4 id="一、网络通信协议模型"><a href="#一、网络通信协议模型" class="headerlink" title="一、网络通信协议模型"></a>一、网络通信协议模型</h4><p>网络通信中，协议和标准这两个词汇常常可以混用。一般地，关注于逻辑数据关系的协议通常被称为上层协议，而关注于物理数据流的协议通常被称为低层协议。</p>
+<p>IEEE 802就是一套用来管理物理数据流在局域网中传输的标准，包括在局域网中传输物理数据的802.3以太网标准，还有一些用来管理物理数据路在使用串行介质的广域网中传输的标准，比如帧中继FR，高级数据链路控制HDLC，异步传输模式ATM。</p>
+<h4 id="二、OSI国际互连"><a href="#二、OSI国际互连" class="headerlink" title="二、OSI国际互连"></a>二、OSI国际互连</h4><p>OSI开放系统互连参考模型，是由ISO国际标准化组织定义的，是模型不是协议，常用来分析和设计网络体系结构。</p>
+<p>OSI模型的目的：规范不同系统的互连标准，使两个不同的系统能够较容易的通信而不需要改变低层的硬件或软件的逻辑。</p>
+<p>OSI七层：物理层 数据链路层 网络层 传输层 会话层 表示层 应用层</p>
+<p>OSI的优点：</p>
+<p>将网络的通信过程划分为小一些、简单一些的部件，因此有助于各个部件的开发、设计和故障排除</p>
+<p>通过网络组件的标准化，允许多个供应商进行开发</p>
+<p>通过定义在模型的每一层实现什么功能，鼓励产业的标准化</p>
+<p>允许各种类型的网络硬件和软件相互通信</p>
+<p>防止对某一层所做的改动影响到其他的层，这样就有利于开发</p>
+<p><img src="C:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250224201134851.png" srcset="/img/loading.gif" lazyload alt="image-20250224201134851"></p>
+<h4 id="三、数据封装"><a href="#三、数据封装" class="headerlink" title="三、数据封装"></a>三、数据封装</h4><p><img src="C:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250224203942932.png" srcset="/img/loading.gif" lazyload alt="image-20250224203942932"></p>
+<p>应用数据需要经过TCP&#x2F;IP每一层处理之后才能通过网络传输到目的端，每一层上都使用该层的协议数据单元PDU彼此交换信息。</p>
+<p>上层数据在传输层添加TCP报头后得到的PDU被称为Segment（数据段）；数据段被传递给网络层，网络层添加IP报头得到的PDU被称为Packet（数据包）；数据包被传递到数据链路层，封装数据链路层报头得到的PDU被称为Frame（数据帧）；最后，帧被转换为比特，通过网络介质传输。这种协议栈逐层向下传递数据，并添加报头和报尾的过程称为封装。</p>
+<p><img src="C:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250224204520471.png" srcset="/img/loading.gif" lazyload alt="image-20250224204520471"></p>
+<p>数据传输过程</p>
+<p><img src="C:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250224204546879.png" srcset="/img/loading.gif" lazyload alt="image-20250224204546879"></p>
+<p>数据包在以太网物理介质上传播之前必须封装头部和尾部信息，封装后的数据包称为数据帧，数据帧中封装的信息决定了数据如何传输。以太网上传输的数据帧有两种格式，选择哪种格式由TCP&#x2F;IP协议簇中的网络层决定。</p>
+<h4 id="四、帧格式"><a href="#四、帧格式" class="headerlink" title="四、帧格式"></a>四、帧格式</h4><p>以太网上使用两种标准帧格式。第一种是上世纪80年代初提出的DIX v2格式，即Ethernet II帧格式。Ethernet II后来被IEEE 802标准接纳，并写进了IEEE 802.3x-1997的3.2.6节。第二种是1983年提出的IEEE 802.3格式。这两种格式的主要区别在于Ethernet II格式中包含一个Type字段，标识以太帧处理完成之后将被发送到哪个上层协议进行处理，IEEE 802.3格式中，同样的位置是长度字段。</p>
+<p>不同的Type字段值可以用来区别这两种帧的类型，当Type字段值小于等于1500（或者十六进制的0x05DC）时，帧使用的是IEEE 802.3格式。当Type字段值大于等于1536 （或者十六进制的0x0600）时，帧使用的是Ethernet II格式。以太网中大多数的数据帧使用的是Ethernet II格式。</p>
+<p>以太帧中还包括源和目的MAC地址，分别代表发送者的MAC和接收者的MAC，此外还有帧校验序列字段，用于检验传输过程中帧的完整性。</p>
+<h4 id="五、Ethernet-II帧格式"><a href="#五、Ethernet-II帧格式" class="headerlink" title="五、Ethernet_II帧格式"></a>五、Ethernet_II帧格式</h4><p><img src="C:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250224210938153.png" srcset="/img/loading.gif" lazyload alt="image-20250224210938153"></p>
+<p>Ethernet_II 帧类型值大于等于1536 (0x0600)。</p>
+<p>以太网数据帧的长度在64-1518字节之间。</p>
+<p>Type字段的作用即用来表明上层使用的协议。</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs stata">Ethernet_II的帧中各字段说明如下：<br>DMAC（Destination <span class="hljs-keyword">MAC</span>）是目的<span class="hljs-keyword">MAC</span>地址。DMAC字段长度为6个字节，标识帧的接收者。<br>SMAC（Source <span class="hljs-keyword">MAC</span>）是源<span class="hljs-keyword">MAC</span>地址。SMAC字段长度为6个字节，标识帧的发送者。<br>类型字段（<span class="hljs-keyword">Type</span>）用于标识数据字段中包含的高层协议，该字段长度为2个字节。类型字段取值为0x0800的帧代表IP协议帧；类型字段取值为0x0806的帧代表ARP协议帧。<br>数据字段（Data）是网络层数据，最小长度必须为46字节以保证帧长至少为64字节，数据字段的最大长度为1500字节。<br>循环冗余校验字段（FCS）提供了一种错误检测机制。该字段长度为4个字节。<br></code></pre></td></tr></table></figure>
+
+<h4 id="六、数据帧传输"><a href="#六、数据帧传输" class="headerlink" title="六、数据帧传输"></a>六、数据帧传输</h4><p>数据链路层基于MAC地址进行帧的传输。</p>
+<p>以太网在二层链路上通过MAC地址来唯一标识网络设备，并且实现局域网上网络设备之间的通信。MAC地址也叫物理地址，大多数网卡厂商把MAC地址烧入了网卡的ROM中。发送端使用接收端的MAC地址作为目的地址。以太帧封装完成后会通过物理层转换成比特流在物理介质上传输。</p>
+<h4 id="七、以太网的MAC地址"><a href="#七、以太网的MAC地址" class="headerlink" title="七、以太网的MAC地址"></a>七、以太网的MAC地址</h4><p>MAC地址由两部分组成，分别是供应商代码和序列号。其中前24位代表该供应商代码，由IEEE管理和分配。剩下的24位序列号由厂商自己分配。</p>
+<p>如同每一个人都有一个名字一样，每一台网络设备都用物理地址来标识自己，这个地址就是MAC地址。网络设备的MAC地址是全球唯一的。MAC地址长度为48比特，通常用十六进制表示。MAC地址包含两部分：前24比特是组织唯一标识符（OUI，Organizationally Unique Identifier），由IEEE统一分配给设备制造商。例如，华为的网络产品的MAC地址前24比特是0x00e0fc。后24位序列号是厂商分配给每个产品的唯一数值，由各个厂商自行分配（这里所说的产品可以是网卡或者其他需要MAC地址的设备）。</p>
+<p>MAC地址的工作范围只在链路层面上，在一个LAN里面。</p>
+<h4 id="八、网络通信"><a href="#八、网络通信" class="headerlink" title="八、网络通信"></a>八、网络通信</h4><h5 id="单播"><a href="#单播" class="headerlink" title="单播"></a>单播</h5><p>局域网上的帧可以通过三种方式发送。第一种是单播，指从单一的源端发送到单一的目的端。每个主机接口由一个MAC地址唯一标识，MAC地址的OUI中，第一字节第8个比特表示地址类型。对于主机MAC地址，这个比特固定为0，表示目的MAC地址为此MAC地址的帧都是发送到某个唯一的目的端。在冲突域中，所有主机都能收到源主机发送的单播帧，但是其他主机发现目的地址与本地MAC地址不一致后会丢弃收到的帧，只有真正的目的主机才会接收并处理收到的帧。</p>
+<h5 id="广播"><a href="#广播" class="headerlink" title="广播"></a>广播</h5><p>第二种发送方式是广播，表示帧从单一的源发送到共享以太网上的所有主机。广播帧的目的MAC地址为十六进制的FF:FF:FF:FF:FF:FF，所有收到该广播帧的主机都要接收并处理这个帧。<br>广播方式会产生大量流量，导致带宽利用率降低，进而影响整个网络的性能。当需要网络中的所有主机都能接收到相同的信息并进行处理的情况下，通常会使用广播方式。</p>
+<h5 id="组播"><a href="#组播" class="headerlink" title="组播"></a>组播</h5><p>第三种发送方式为组播，组播比广播更加高效。组播转发可以理解为选择性的广播，主机侦听特定组播地址，接收并处理目的MAC地址为该组播MAC地址的帧。<br>组播MAC地址和单播MAC地址是通过第一字节中的第8个比特区分的。组播MAC地址的第8个比特为1，而单播MAC地址的第8个比特为0。<br>当需要网络上的一组主机（而不是全部主机）接收相同信息，并且其他主机不受影响的情况下通常会使用组播方式。</p>
+<h4 id="九、数据帧的发送和接收"><a href="#九、数据帧的发送和接收" class="headerlink" title="九、数据帧的发送和接收"></a>九、数据帧的发送和接收</h4><p>帧从主机的物理接口发送出来后，通过传输介质传输到目的端。共享网络中，这个帧可能到达多个主机。</p>
+<p>主机检查帧头中的目的MAC地址，如果目的MAC地址不是本机MAC地址，也不是本机侦听的组播或广播MAC地址，则主机会丢弃收到的帧。如果目的MAC地址是本机MAC地址，则接收该帧，检查帧校验序列（FCS）字段，并与本机计算的值对比来确定帧在传输过程中是否保持了完整性。如果帧的FCS值与本机计算的值不同，主机会认为帧已被破坏，并会丢弃该帧。如果该帧通过了FCS校验，则主机会根据帧头部中的Type字段来确定将帧发送给上层哪个协议处理。</p>
+<h4 id="十、上层协议类型"><a href="#十、上层协议类型" class="headerlink" title="十、上层协议类型"></a>十、上层协议类型</h4><p>在剥掉帧的头部和尾部之前，网络设备需要根据帧头中Type字段确定下一步将帧发送到哪个上层协议进行处理。</p>
+<p>类型字段取值为0x0800的帧代表IP协议帧；类型字段取值为0x0806的帧代表ARP协议帧。</p>
+<h3 id="IP编址"><a href="#IP编址" class="headerlink" title="IP编址"></a>IP编址</h3><p>IPV4地址由32位二进制数组成，这些位被划分为4个字节，中间用“.”号隔开，每组8位，以十进制数形式表示。分为<strong>网络地址</strong>和<strong>主机地址</strong>两个部分。</p>
+<p>IP地址：192.168.1.1  子网掩码：255.255.255.0</p>
+<p><img src="C:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250225170714129.png" srcset="/img/loading.gif" lazyload alt="image-20250225170714129"></p>
+<p>通过子网掩码来判断哪一部份是网络位，哪一部份是主机位。全1的部份是网络位，全0的部份是主机位。</p>
+<p>网络号：192.168.1.0   当前网络的第一个地址，不能配置给主机</p>
+<p>广播号：192.168.1.255  当前网络的最后一个地址，不能配置给主机</p>
+<p>可用地址范围：192.168.1.1–192.168.1.254</p>
+<h4 id="一、IP报文头部"><a href="#一、IP报文头部" class="headerlink" title="一、IP报文头部"></a>一、IP报文头部</h4><p><img src="C:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250225165157241.png" srcset="/img/loading.gif" lazyload alt="image-20250225165157241"></p>
+<p>IP报文头部信息用于指导网络设备对报文进行路由和分片。同一个网段内的数据转发通过链路层即可实现，而跨网段的数据转发需要使用网络设备的路由功能。</p>
+<p>分片是指数据包超过一定长度时，需要被划分成不同的片段使其能够在网络中传输。</p>
+<p>IP报文头部长度为20到60字节，报文头中的信息可以用来指导网络设备如何将报文从源设备发送到目的设备。其中，版本字段表示当前支持的IP协议版本，当前的版本号为4。DS字段早期用来表示业务类型，现在用于支持QoS中的差分服务模型，实现网络流量优化。源和目的IP地址是分配给主机的逻辑地址，用于在网络层标识报文的发送方和接收方。根据源和目的IP地址可以判断目的端是否与发送端位于同一网段，如果二者不在同一网段，则需要采用路由机制进行跨网段转发。</p>
+<h4 id="二、IP包分片"><a href="#二、IP包分片" class="headerlink" title="二、IP包分片"></a>二、IP包分片</h4><p><img src="C:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250225170112200.png" srcset="/img/loading.gif" lazyload alt="image-20250225170112200"></p>
+<p>标识符字段（identification）用于识别属于同一个数据包的分片，以区别于同一主机或其他主机发送的其它数据包分片，保证分片被正确的重新组合。</p>
+<p>标志字段（flags）用于判断是否已经收到最后一个分片（最后一个为0、其他为1）</p>
+<p>片偏移字段（fragment offset）表示每个分片在原始报文中的位置</p>
+<h4 id="三、IP地址分类"><a href="#三、IP地址分类" class="headerlink" title="三、IP地址分类"></a>三、IP地址分类</h4><h5 id="A类网络地址范围（0开头）"><a href="#A类网络地址范围（0开头）" class="headerlink" title="A类网络地址范围（0开头）"></a>A类网络地址范围（0开头）</h5><p>第一个字节的第一位必须为0，第一个字节的取值为0-127。即：0xxxxxxx   取值范围是：<em><strong>0</strong></em>0000000－<strong>0</strong>1111111（0－127）</p>
+<p>A类地址的子网掩码是：255.0.0.0，也就第一个字节是网络位，后3个字节为主机位。</p>
+<p><strong>举例：</strong>1.1.1.1  255.0.0.0 </p>
+<p>网络号（标识地址具体在哪个网络）：1.0.0.0</p>
+<p>广播地址：1.255.255.255</p>
+<p>在这网络中有多少个地址呢？224</p>
+<p>有效地址（可以配置给主机的地址）：224-2</p>
+<p>可用地址范围：1.0.0.1–1.255.255.254</p>
+<h5 id="B类网络地址转换（10开头）"><a href="#B类网络地址转换（10开头）" class="headerlink" title="B类网络地址转换（10开头）"></a>B类网络地址转换（10开头）</h5><p>第一个字节的第一位必须是1，且第二位必须是0，第一个字节的取值为<strong>128－191</strong>。即：<strong>1</strong>0000000  取值范围是：<strong>10</strong>000000－<strong>10</strong>111111（128－191）</p>
+<p>B类地址的子网掩码是：255.255.0.0，也就前两个字节是网络位，后2个字节为主机位。</p>
+<p>举例：181.1.1.1  255.255.0.0</p>
+<p>网络地址：181.1.0.0</p>
+<p>广播地址：181.1.255.255</p>
+<p>有效地址：216-2  </p>
+<p>可用地址范围：181.1.0.1—-181.1.255.254</p>
+<h5 id="C类网络地址转换（110开头）"><a href="#C类网络地址转换（110开头）" class="headerlink" title="C类网络地址转换（110开头）"></a>C类网络地址转换（110开头）</h5><p>第一个字节的前两位必须是1，且第三位必须是0，第一个字节的取值为<strong>192－223</strong>。即：<strong>110</strong>00000  取值范围是：<strong>110</strong>00000－11011111（192－223）</p>
+<p>C类地址的子网掩码是：255.255.255.0，也就前三个字节是网络位，最后1个字节为主机位。</p>
+<p>举例：192.168.1.1  255.255.255.0</p>
+<p>网络地址：192.168.1.0  </p>
+<p>广播地址：192.168.1.255</p>
+<p>有效地址：28-2  </p>
+<p>有效地址范围：192.168.1.1–192.168.1.254</p>
+<h5 id="D类网络的地址范围"><a href="#D类网络的地址范围" class="headerlink" title="D类网络的地址范围"></a>D类网络的地址范围</h5><p>第一个字节为224–239，用作组播地址。</p>
+<h5 id="E类网络的地址范围"><a href="#E类网络的地址范围" class="headerlink" title="E类网络的地址范围"></a>E类网络的地址范围</h5><p>第一个字节为240–255，用于科学用途。</p>
+<h5 id="私有IP地址范围"><a href="#私有IP地址范围" class="headerlink" title="私有IP地址范围"></a>私有IP地址范围</h5><p>在公网中是不能路由的，必须经过地址转换。</p>
+<p>A类　10.0.0.0~10.255.255.255</p>
+<p>B类    172.16.0.0~172.31.255.255</p>
+<p>C类    192.168.0.0~192.168.255.255</p>
+<h5 id="特殊地址"><a href="#特殊地址" class="headerlink" title="特殊地址"></a>特殊地址</h5><p>环回地址：127.0.0.0~127.255.255.255，用于诊断网络是否正常。</p>
+<p>任何网络：0.0.0.0</p>
+<p>广播地址255.255.255.255</p>
+<h4 id="四、子网划分"><a href="#四、子网划分" class="headerlink" title="四、子网划分"></a>四、子网划分</h4><p>子网划分的核心思想：“借用”主机位 来“制造”新的“网络”</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs accesslog">引入：<br><span class="hljs-number">10.1.1.1</span> <span class="hljs-number">255</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>         <span class="hljs-number">10</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>/<span class="hljs-number">8</span><br><span class="hljs-number">172.16.1.1</span> <span class="hljs-number">255</span>.<span class="hljs-number">255</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>     <span class="hljs-number">172</span>.<span class="hljs-number">16</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>/<span class="hljs-number">16</span><br><span class="hljs-number">192.168.1.1</span> <span class="hljs-number">255</span>.<span class="hljs-number">255</span>.<span class="hljs-number">255</span>.<span class="hljs-number">0</span>  <span class="hljs-number">192</span>.<span class="hljs-number">168</span>.<span class="hljs-number">1</span>.<span class="hljs-number">0</span>/<span class="hljs-number">24</span><br>C类地址的子网划分：<br>怎么划分呢？向主机位借位，借了几位就表示该网络被划分成了<span class="hljs-number">2</span>的几次方个网络。<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight gml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs gml"><span class="hljs-number">1.</span>你所选择的子网掩码将会产生多少个子网?<br>	<span class="hljs-number">2</span>的<span class="hljs-variable language_">x</span>次方（<span class="hljs-variable language_">x</span>：子网位数）<br><span class="hljs-number">2.</span>每个子网能有多少主机?<br>	<span class="hljs-number">2</span>的<span class="hljs-variable language_">y</span>次方<span class="hljs-number">-2</span>（<span class="hljs-variable language_">y</span>：主机位数）<br><span class="hljs-number">3.</span>有效子网（块大小）?<br>	块大小=<span class="hljs-number">2</span>的<span class="hljs-variable language_">y</span>次方（<span class="hljs-variable language_">y</span>：主机位数）<br>	(结果叫做block size 或base number)<br><span class="hljs-number">4.</span>每个子网的广播地址是?<br>	主机位全为<span class="hljs-number">1</span>。（广播地址=下个子网号<span class="hljs-number">-1</span>）<br><span class="hljs-number">5.</span>每个子网的有效主机分别是?<br>	忽略子网内全为<span class="hljs-number">0</span>和全为<span class="hljs-number">1</span>的地址，剩下的就是有效主机地址。<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs dns">举例：<span class="hljs-number">192.168.1.0</span>  <span class="hljs-number">255.255.255.0</span> <br><span class="hljs-number">11111111</span>.<span class="hljs-number">11111111</span>.<span class="hljs-number">11111111</span>.<span class="hljs-number">10000000</span><br>向主机位借了<span class="hljs-number">1</span>位，所以该网络被划分成了<span class="hljs-number">21</span>=<span class="hljs-number">2</span>个网络。<br>子网掩码值：<span class="hljs-number">255.255.255.128</span><br>块大小：<span class="hljs-number">256-128=128</span><br>分成了哪<span class="hljs-number">2</span>个网络呢？<br>	网络号：<span class="hljs-number">192.168.1.0</span>/<span class="hljs-number">25</span><br>	广播号：<span class="hljs-number">192.168.1.127</span><br>	可用地址：<span class="hljs-number">192.168.1.1</span>-<span class="hljs-number">192.168.1.126</span><br>	网络号：<span class="hljs-number">192.168.1.128</span>/<span class="hljs-number">25</span><br>	广播号：<span class="hljs-number">192.168.1.255</span><br>	可用地址：<span class="hljs-number">192.168.1.129</span>-<span class="hljs-number">192.168.1.254</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs dns">计算：<span class="hljs-number">192.168.1.0</span>/<span class="hljs-number">24</span>    向主机位借<span class="hljs-number">4</span>位     <br><span class="hljs-number">11110000</span>  <span class="hljs-number">128+64+32+16</span> +<span class="hljs-number">0+0+0+0</span>=<span class="hljs-number">240</span><br>子网掩码：<span class="hljs-number">255.255.255.240</span> /<span class="hljs-number">28</span><br>块大小：<span class="hljs-number">256-240=16</span><br>划分了几个网络：<span class="hljs-number">2</span>^<span class="hljs-number">4</span>=<span class="hljs-number">16</span><br><span class="hljs-number">0</span>   <span class="hljs-number">16</span>   <span class="hljs-number">32</span>   <span class="hljs-number">48</span>   <span class="hljs-number">64</span>   <span class="hljs-number">80</span>   ...... <br>问题：被分成了几个网络？  <span class="hljs-number">192.168.1.73</span>在哪个网络？<br>答：<span class="hljs-number">16</span>个网络，<span class="hljs-number">192.168.1.64</span>/<span class="hljs-number">28</span><br>网络号：<span class="hljs-number">192.168.1.64</span>/<span class="hljs-number">28</span><br>广播号：<span class="hljs-number">192.168.1.79</span><br>可用地址：<span class="hljs-number">192.168.1.65</span>--<span class="hljs-number">192.168.1.78</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs accesslog">B类地址的子网划分：<br><span class="hljs-number">172.16.1.1</span>/<span class="hljs-number">16</span>    <span class="hljs-number">255</span>.<span class="hljs-number">255</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>     向主机位借<span class="hljs-number">12</span>位<br>借位后的子网掩码：<span class="hljs-number">255</span>.<span class="hljs-number">255</span>.<span class="hljs-number">255</span>.<span class="hljs-number">240</span>  <span class="hljs-number">1111</span> <span class="hljs-number">0000</span>   <span class="hljs-number">128</span>+<span class="hljs-number">64</span>+<span class="hljs-number">32</span>+<span class="hljs-number">16</span><br>块大小： <span class="hljs-number">256</span>-<span class="hljs-number">240</span>=<span class="hljs-number">16</span><br>有哪些网络呢？/<span class="hljs-number">28</span><br><span class="hljs-number">172.16.0.0</span>  <span class="hljs-number">0</span>.<span class="hljs-number">16</span>  <span class="hljs-number">0</span>.<span class="hljs-number">32</span>  <span class="hljs-number">0</span>.<span class="hljs-number">48</span> .......<br><span class="hljs-number">172.16.1.0</span>  <span class="hljs-number">1</span>.<span class="hljs-number">64</span>  <span class="hljs-number">1</span>.<span class="hljs-number">128</span>  <span class="hljs-number">1</span>.<span class="hljs-number">192</span><br>......<br><span class="hljs-number">172.16.255.0</span>  <span class="hljs-number">255</span>.<span class="hljs-number">64</span>  <span class="hljs-number">255</span>.<span class="hljs-number">128</span>  <span class="hljs-number">255</span>.<span class="hljs-number">192</span><br></code></pre></td></tr></table></figure>
+
+<h5 id="1-子网掩码"><a href="#1-子网掩码" class="headerlink" title="1.子网掩码"></a>1.子网掩码</h5><p><img src="C:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250225195414790.png" srcset="/img/loading.gif" lazyload alt="image-20250225195414790"></p>
+<h5 id="2-默认子网掩码"><a href="#2-默认子网掩码" class="headerlink" title="2.默认子网掩码"></a>2.默认子网掩码</h5><p><img src="C:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250225195438498.png" srcset="/img/loading.gif" lazyload alt="image-20250225195438498"></p>
+<h5 id="3-有类路由"><a href="#3-有类路由" class="headerlink" title="3.有类路由"></a>3.有类路由</h5><p>有类路由选择：RIP1  IGRP协议</p>
+<p>汇总以后地址是标准的A B C类地址掩码 即 255.0.0.0 255.255.0.0 255.255.255.0 (<a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=%E6%9C%89%E7%B1%BB%E8%B7%AF%E7%94%B1&from=1012015a&fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1Y3rHTzm1c3uW6zuhmdm1bz0ZwV5Hcvrjm3rH6sPfKWUMw85HfYnjn4nH6sgvPsT6KdThsqpZwYTjCEQLGCpyw9Uz4Bmy-bIi4WUvYETgN-TLwGUv3EnWRsnHn1nWnd">有类路由</a>里 大类网络中 子网码必须一致 这样叫做有类路由 因为有类路由协议不传递子网码信息)</p>
+<p><img src="file:///C:\Users\lenovopc\AppData\Local\Temp\ksohtml14008\wps1.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>有类IP编址的缺陷：在设计网络时使用有类IP地址会造成地址的浪费。</p>
+<h5 id="4-无类路由"><a href="#4-无类路由" class="headerlink" title="4.无类路由"></a>4.无类路由</h5><p>无类路由选择：RIP2、EIGRP、OSPF等协议</p>
+<p>汇总以后地址是无类的比如 172.16.12.0&#x2F;16 - 172.16.15.0&#x2F;16 汇总以后的地址是 172.16.12.0&#x2F;20 子码 不属于 A B C 3个类别(无类路由是相反的 他传递子网信息所有大类网络中可以使用不同的子网码)</p>
+<p><img src="file:///C:\Users\lenovopc\AppData\Local\Temp\ksohtml14008\wps2.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="file:///C:\Users\lenovopc\AppData\Local\Temp\ksohtml14008\wps3.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h6 id="4-1-变长子网掩码VLSM"><a href="#4-1-变长子网掩码VLSM" class="headerlink" title="4.1.变长子网掩码VLSM"></a>4.1.变长子网掩码VLSM</h6><p>VLSM：可变长子网掩码（借用主机位）</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs angelscript">变长子网掩码(Variable-Length Subnet Masks,VLSM)的出现是打破传统的以类(<span class="hljs-keyword">class</span>)为标准的地址划分方法，是为了缓解<span class="hljs-symbol">IP</span>地址紧缺而产生的；<br>作用：节约<span class="hljs-symbol">IP</span>地址空间<br>注意事项：使用<span class="hljs-symbol">VLSM</span>时,所采用的路由协议必须能够支持它,这些路由协议包括<span class="hljs-symbol">RIPv2,<span class="hljs-symbol">OSPF</span>,<span class="hljs-symbol">EIGRP</span></span>和<span class="hljs-symbol">BGP</span>；<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">使用长度不同的子网掩码将网络划分成多个子网，适用于不同类型的网络设计，称为VLSM组网。<br></code></pre></td></tr></table></figure>
+
+<h6 id="4-2-无类域间路由CIDR"><a href="#4-2-无类域间路由CIDR" class="headerlink" title="4.2.无类域间路由CIDR"></a>4.2.无类域间路由CIDR</h6><p>CIDR的概念：忽略A、B、C类网络的规则，定义前缀相同的一组网络为一个块，即一条路由条目。（如：199.0.0.0&#x2F;8）</p>
+<p>CIDR的优点：<br>    减少了网络数目，缩小了路由选择表；<br>    从网络流量、CPU和内存方面说，开销更低；<br>    对网络进行编址时，灵活性更大；<br>    CIDR 增强了网络的可扩展性。</p>
+<p><img src="C:\Users\lenovopc\AppData\Roaming\Typora\typora-user-images\image-20250225202723690.png" srcset="/img/loading.gif" lazyload alt="image-20250225202723690"></p>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs dns">无类域间路由CIDR（Classless Inter Domain Routing）由RFC1817定义。CIDR突破了传统IP地址的分类边界，将路由表中的若干条路由汇聚为一条路由，减少了路由表的规模，提高了路由器的可扩展性。<br>如上图所示，一个企业分配到了一段<span class="hljs-keyword">A</span>类网络地址，<span class="hljs-number">10.24.0.0</span>/<span class="hljs-number">22</span>。该企业准备把这些<span class="hljs-keyword">A</span>类网络分配给各个用户群，目前已经分配了四个网段给用户。如果没有实施CIDR技术，企业路由器的路由表中会有四条下连网段的路由条目，并且会把它通告给其他路由器。通过实施CIDR技术，我们可以在企业的路由器上把这四条路由<span class="hljs-number">10.24.0.0</span>/<span class="hljs-number">24，10.24.1</span>.<span class="hljs-number">0/24，10.24</span>.<span class="hljs-number">2.0/24，10</span>.<span class="hljs-number">24.3.0/24</span>汇聚成一条路由<span class="hljs-number">10.24.0.0</span>/<span class="hljs-number">22</span>。这样，企业路由器只需通告<span class="hljs-number">10.24.0.0</span>/<span class="hljs-number">22</span>这一条路由，大大减小了路由表的规模。<br></code></pre></td></tr></table></figure>
+
+<p>CIDR值表：</p>
+<table>
+<thead>
+<tr>
+<th>255.0.0.0         &#x2F;8</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>255.128.0.0        &#x2F;9</td>
+</tr>
+<tr>
+<td>255.192.0.0        &#x2F;10</td>
+</tr>
+<tr>
+<td>255.224.0.0        &#x2F;11</td>
+</tr>
+<tr>
+<td>255.240.0.0        &#x2F;12</td>
+</tr>
+<tr>
+<td>255.248.0.0        &#x2F;13</td>
+</tr>
+<tr>
+<td>255.252.0.0        &#x2F;14</td>
+</tr>
+<tr>
+<td>255.254.0.0        &#x2F;15</td>
+</tr>
+<tr>
+<td>255.255.0.0        &#x2F;16</td>
+</tr>
+<tr>
+<td>255.255.128.0       &#x2F;17</td>
+</tr>
+<tr>
+<td>255.255.192.0       &#x2F;18</td>
+</tr>
+<tr>
+<td>255.255.224.0       &#x2F;19</td>
+</tr>
+<tr>
+<td>255.255.240.0      &#x2F;20</td>
+</tr>
+<tr>
+<td>255.255.248.0      &#x2F;21</td>
+</tr>
+<tr>
+<td>255.255.252.0      &#x2F;22</td>
+</tr>
+<tr>
+<td>255.255.254.0      &#x2F;23</td>
+</tr>
+<tr>
+<td>255.255.255.0      &#x2F;24</td>
+</tr>
+<tr>
+<td>255.255.255.128     &#x2F;25</td>
+</tr>
+<tr>
+<td>255.255.255.192     &#x2F;26</td>
+</tr>
+<tr>
+<td>255.255.255.224     &#x2F;27</td>
+</tr>
+<tr>
+<td>255.255.255.240     &#x2F;28</td>
+</tr>
+<tr>
+<td>255.255.255.248     &#x2F;29</td>
+</tr>
+<tr>
+<td>255.255.255.252     &#x2F;30</td>
+</tr>
+</tbody></table>
+<h5 id="5-网关"><a href="#5-网关" class="headerlink" title="5.网关"></a>5.网关</h5><p>网关用来转发来自不同网段之间的数据包。</p>
+<p>报文转发过程中，首先需要确定转发路径以及通往目的网段的接口，然后将报文封装在以太帧中通过指定的物理接口转发出去。如果目的主机与源主机不在同一网段，报文需要先转发到网关，然后通过网关将报文转发到目的网段。</p>
+<p>网关是指接收并处理本地网段主机发送的报文并转发到目的网段的设备。为实现此功能，网关必须知道目的网段的IP地址。网关设备上连接本地网段的接口地址即为该网段的网关地址。</p>
+<h4 id="六、进制之间转换"><a href="#六、进制之间转换" class="headerlink" title="六、进制之间转换"></a>六、进制之间转换</h4><table>
+<thead>
+<tr>
+<th><strong>进制</strong></th>
+<th><strong>字符范围</strong></th>
+<th><strong>基值</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>二进制</td>
+<td>0 — 1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>十进制</td>
+<td>0 — 9</td>
+<td>10</td>
+</tr>
+<tr>
+<td>十六进制</td>
+<td>0 —9，A — F</td>
+<td>16</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>比特位</th>
+<th>1</th>
+<th>1</th>
+<th>1</th>
+<th>1</th>
+<th>1</th>
+<th>1</th>
+<th>1</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>乘方</td>
+<td>27</td>
+<td>26</td>
+<td>25</td>
+<td>24</td>
+<td>23</td>
+<td>22</td>
+<td>21</td>
+<td>20</td>
+</tr>
+<tr>
+<td>数值</td>
+<td>128</td>
+<td>64</td>
+<td>32</td>
+<td>16</td>
+<td>8</td>
+<td>4</td>
+<td>2</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>十进制</th>
+<th>二进制</th>
+<th>十六进制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>00000000</td>
+<td>00</td>
+</tr>
+<tr>
+<td>1</td>
+<td>00000001</td>
+<td>01</td>
+</tr>
+<tr>
+<td>2</td>
+<td>00000010</td>
+<td>02</td>
+</tr>
+<tr>
+<td>3</td>
+<td>00000011</td>
+<td>03</td>
+</tr>
+<tr>
+<td>4</td>
+<td>00000100</td>
+<td>04</td>
+</tr>
+<tr>
+<td>5</td>
+<td>00000101</td>
+<td>05</td>
+</tr>
+<tr>
+<td>6</td>
+<td>00000110</td>
+<td>06</td>
+</tr>
+<tr>
+<td>7</td>
+<td>00000111</td>
+<td>07</td>
+</tr>
+<tr>
+<td>8</td>
+<td>00001000</td>
+<td>08</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>十进制</th>
+<th>二进制</th>
+<th>十六进制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>9</td>
+<td>00001001</td>
+<td>09</td>
+</tr>
+<tr>
+<td>10</td>
+<td>00001010</td>
+<td>0A</td>
+</tr>
+<tr>
+<td>11</td>
+<td>00001011</td>
+<td>0B</td>
+</tr>
+<tr>
+<td>12</td>
+<td>00001100</td>
+<td>0C</td>
+</tr>
+<tr>
+<td>13</td>
+<td>00001101</td>
+<td>0D</td>
+</tr>
+<tr>
+<td>14</td>
+<td>00001110</td>
+<td>0E</td>
+</tr>
+<tr>
+<td>15</td>
+<td>00001111</td>
+<td>0F</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr>
+<td>255</td>
+<td>11111111</td>
+<td>FF</td>
+</tr>
+</tbody></table>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/" class="category-chain-item">信息安全</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>第一阶段：网络安全模块</div>
+      <div>http://example.com/2025/02/25/第一阶段：网络安全模块/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>原来是阿欲</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年2月25日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/02/02/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%A3%81%E7%9B%98%E6%97%A0%E6%B3%95%E6%89%A9%E5%B1%95%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" title="虚拟机磁盘无法扩展问题解决">
+                        <span class="hidden-mobile">虚拟机磁盘无法扩展问题解决</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"NW6bLEuU88y0oTIVj3J2zXai-gzGzoHsz","appKey":"61M3wafcrTTADVS9Uc3F7co3","path":"window.location.pathname","placeholder":"说点什么……","avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        总访问量
+        <span id="leancloud-site-pv"></span>
+        次
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        总访客数
+        <span id="leancloud-site-uv"></span>
+        人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
